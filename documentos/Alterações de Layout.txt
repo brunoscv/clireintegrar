@@ -1,0 +1,11 @@
+1) Dentro de assets/plugins/bootstrap/bootstrap.min.css alterar o .container@media (min-width:1200px){.container{width:1170px}} para .container@media (min-width:1200px){.container{width:auto}} 
+   - Isso fará com que o conteudo total do site se adapte ao tamanho do espaço real da tela.
+   - Alterar a chamada do modern.min.css para modern.css (login.php e header.php)
+2) Dentro do layout/header.php localizar a div  <div class="page-sidebar sidebar horizontal-bar"> e trocar por
+ <div class="page-sidebar sidebar vertical-bar">
+
+3) Dentro do modern.css modificar a classe page-inner, no elemento padding: 0 0 50px para padding: 4.8em 0 50px
+   Ainda dentro do modern.css alterar a linha 5338 de  background: #FFF para  background: #364150 na classe .navbar e na linha 2599 de  background: #FFF para  background: #364150 na classe .topmenu-outer
+   Na linha 5347 na classe .navbar .logo-box a, alterar de color: #F5F5F5 para  color: #FFF
+   Na linha 2662 na classe .top-menu .navbar-nav > li > a,  alterar de color: #F5F5F5 para  color: #FFF
+ 

@@ -1,0 +1,53 @@
+NO BOTAO ADICIONAR OPCAO
+ enviar ajax para o controller /opcoes/criar
+ POST:{questao_id}
+ Criando uma questao somente com id
+
+ Após o sucesso da execucao do ajax, ele exibir os inputs da opcoes
+ 	descricao_{$ID_OPCAO}
+ 	valor_{$ID_OPCAO}
+
+
+
+
+
+
+$.ajax({
+	url: "endereco/da/acao",
+	type: "POST/GET",
+	dataType: "html/json",
+	data: {questao_id:"10", opcao_id:"11"},
+	beforeSend:function(){
+
+	},
+	success:function(result){ //{result:{id:10, descricao:'', prova_id:1}}
+		if( result.id ){
+			//duplica a div do form
+		}
+	}
+})
+
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery('#ajax_form').submit(function(){
+			var dados = jQuery( this ).serialize();
+
+			jQuery.ajax({
+				type: "POST",
+				url: "processa.php",
+				data: dados,
+				success: function( data )
+				{
+					alert( data );
+				}
+			});
+			
+			return false;
+		});
+	});
+	</script>
+
+
+	<form method="post" action="" id="ajax_form">
+		<label><input type="hidden" name="id" value="" /></label>
+		<label>Nome: <input type="text" name="nome" value="" /></label>
